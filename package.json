@@ -2,7 +2,7 @@
     "name": "f5-anything",
     "displayName": "F5 Anything (Zero-Config Code Runner)",
     "description": "Press F5 to build & run any programming language instantly. Zero-config code execution for VS Code.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "loerei",
     "engines": {
         "vscode": "^1.80.0"
