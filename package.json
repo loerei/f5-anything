@@ -1,0 +1,61 @@
+{
+    "name": "f5-anything",
+    "displayName": "F5 Anything (Zero-Config Code Runner)",
+    "description": "Press F5 to build & run any programming language instantly. Zero-config code execution for VS Code.",
+    "version": "0.1.0",
+    "publisher": "loerei",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Keybindings",
+        "Other"
+    ],
+    "keywords": [
+        "f5",
+        "code runner",
+        "run",
+        "zero-config",
+        "fast run"
+    ],
+    "icon": "icon.png",
+    "galleryBanner": {
+        "color": "#1a1a1a",
+        "theme": "dark"
+    },
+    "homepage": "https://github.com/loerei/f5-anything#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/loerei/f5-anything.git"
+    },
+    "bugs": {
+        "url": "https://github.com/loerei/f5-anything/issues"
+    },
+    "extensionDependencies": [
+        "formulahendry.code-runner"
+    ],
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "f5",
+                "command": "code-runner.run",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "shift+f5",
+                "command": "code-runner.stop",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "title": "F5 Anything",
+            "properties": {
+                "f5-anything.autoSave": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically save files before executing via F5."
+                }
+            }
+        }
+    }
+}
