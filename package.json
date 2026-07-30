@@ -1,9 +1,16 @@
 {
     "name": "f5-anything",
     "displayName": "F5 Anything (Zero-Config Code Runner)",
-    "description": "Press F5 to build & run any programming language instantly. Zero-config code execution for VS Code.",
-    "version": "0.1.1",
+    "description": "Press F5 to build & run any programming language instantly. Supports Exclude / Include mode per folder.",
+    "version": "0.2.0",
     "publisher": "loerei",
+    "main": "./extension.js",
+    "activationEvents": [
+        "onCommand:f5-anything.excludeCurrentFolder",
+        "onCommand:f5-anything.includeCurrentFolder",
+        "onCommand:f5-anything.toggleMode",
+        "onCommand:f5-anything.runSmart"
+    ],
     "engines": {
         "vscode": "^1.80.0"
     },
@@ -16,7 +23,7 @@
         "code runner",
         "run",
         "zero-config",
-        "fast run"
+        "exclude mode"
     ],
     "icon": "icon.png",
     "galleryBanner": {
@@ -35,10 +42,24 @@
         "formulahendry.code-runner"
     ],
     "contributes": {
+        "commands": [
+            {
+                "command": "f5-anything.excludeCurrentFolder",
+                "title": "F5 Anything: Exclude Current Folder"
+            },
+            {
+                "command": "f5-anything.includeCurrentFolder",
+                "title": "F5 Anything: Include Current Folder"
+            },
+            {
+                "command": "f5-anything.toggleMode",
+                "title": "F5 Anything: Toggle Mode (Exclude / Include)"
+            }
+        ],
         "keybindings": [
             {
                 "key": "f5",
-                "command": "code-runner.run",
+                "command": "f5-anything.runSmart",
                 "when": "editorTextFocus"
             },
             {
@@ -50,10 +71,30 @@
         "configuration": {
             "title": "F5 Anything",
             "properties": {
-                "f5-anything.autoSave": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Automatically save files before executing via F5."
+                "f5-anything.mode": {
+                    "type": "string",
+                    "enum": [
+                        "exclude",
+                        "include"
+                    ],
+                    "default": "exclude",
+                    "description": "Select mode: 'exclude' runs on all folders except listed ones; 'include' runs ONLY on listed folders."
+                },
+                "f5-anything.excludedFolders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
+                    "description": "List of folder paths to exclude from F5 execution."
+                },
+                "f5-anything.includedFolders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
+                    "description": "List of folder paths to include for F5 execution."
                 }
             }
         }
