@@ -1,6 +1,6 @@
 # ⚡ F5 Anything (Zero-Config Code Runner)
 
-> 🎓 **Built specifically for CS Learners, Students, & Educators.**
+> 🎓 **Built for CS Learners, Students, & Educators.**
 > **Press F5 to build & run any programming language instantly in VS Code.** No `.vscode` folder required, no `tasks.json` or `launch.json` headaches.
 
 ![VS Code Marketplace Version](https://img.shields.io/badge/VS%20Code%20Marketplace-v0.1.0-blue)
