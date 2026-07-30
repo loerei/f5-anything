@@ -1,5 +1,6 @@
 # ⚡ F5 Anything (Zero-Config Code Runner)
 
+> 🎓 **Built specifically for CS Learners, Students, & Educators.**
 > **Press F5 to build & run any programming language instantly in VS Code.** No `.vscode` folder required, no `tasks.json` or `launch.json` headaches.
 
 ![VS Code Marketplace Version](https://img.shields.io/badge/VS%20Code%20Marketplace-v0.1.0-blue)
@@ -18,7 +19,7 @@
 
 ## 📦 Part of the F5 Anything Suite
 
-This extension works best when paired with:
+This extension is part of the **F5 Anything Suite**, designed to make VS Code friction-free for Computer Science learners:
 
 - **[No More .vscode](https://github.com/loerei/no-more-vscode)**: Keep your workspace 100% clean by isolating binary outputs away from your code folders.
 - **[Easy Binary](https://github.com/loerei/easy-binary)**: Auto-install missing compilers (MinGW GCC, Python, JDK, Go SDK) via Winget.
@@ -51,4 +52,3 @@ Special thanks to Jun Han and the open-source community for providing the underl
 ## 📄 License
 
 [MIT License](LICENSE) © [loerei](https://github.com/loerei)
-
