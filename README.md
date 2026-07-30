@@ -21,7 +21,7 @@
 
 This extension is part of the **F5 Anything Suite**, designed to make VS Code friction-free for Computer Science learners:
 
-- **[No More .vscode](https://github.com/loerei/no-more-vscode)**: Keep your workspace 100% clean by isolating binary outputs away from your code folders.
+- **[No More .vscode](https://github.com/loerei/no-more-dotvscode)**: Keep your workspace 100% clean by isolating binary outputs away from your code folders.
 - **[Easy Binary](https://github.com/loerei/easy-binary)**: Auto-install missing compilers (MinGW GCC, Python, JDK, Go SDK) via Winget.
 - **[F5 Anything Suite](https://github.com/loerei/f5-anything-suite)**: Install the complete zero-config package in 1 click!
 
