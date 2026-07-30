@@ -40,6 +40,15 @@ This extension works best when paired with:
 
 ---
 
+## 🙏 Acknowledgements & Credits
+
+**F5 Anything** is built on top of the incredible execution ecosystem powered by [Code Runner](https://github.com/formulahendry/vscode-code-runner), created by **Jun Han ([@formulahendry](https://github.com/formulahendry))**. 
+
+Special thanks to Jun Han and the open-source community for providing the underlying multi-language execution engine.
+
+---
+
 ## 📄 License
 
 [MIT License](LICENSE) © [loerei](https://github.com/loerei)
+
