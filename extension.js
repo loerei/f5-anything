@@ -1,6 +1,19 @@
 const vscode = require('vscode');
 
 function activate(context) {
+    // Auto-ensure Code Runner executes in Integrated Terminal for full ANSI color and input support
+    try {
+        const codeRunnerConfig = vscode.workspace.getConfiguration('code-runner');
+        if (!codeRunnerConfig.get('runInTerminal')) {
+            codeRunnerConfig.update('runInTerminal', true, vscode.ConfigurationTarget.Global);
+        }
+        if (!codeRunnerConfig.get('saveFileBeforeRun')) {
+            codeRunnerConfig.update('saveFileBeforeRun', true, vscode.ConfigurationTarget.Global);
+        }
+    } catch (e) {
+        // Silently handle if config is read-only
+    }
+
     // 1. Command: Exclude Current Folder
     let excludeCmd = vscode.commands.registerCommand('f5-anything.excludeCurrentFolder', async function () {
         const folder = getActiveFolderPath();

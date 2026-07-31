@@ -2,7 +2,7 @@
     "name": "f5-anything",
     "displayName": "F5 Anything (Zero-Config Code Runner)",
     "description": "Press F5 to build & run any programming language instantly. Supports Exclude / Include mode per folder.",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "publisher": "loerei",
     "main": "./extension.js",
     "activationEvents": [
@@ -95,6 +95,22 @@
                     },
                     "default": [],
                     "description": "List of folder paths to include for F5 execution."
+                },
+                "code-runner.runInTerminal": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource",
+                    "description": "Run code in Integrated Terminal to support colors and input."
+                },
+                "code-runner.saveFileBeforeRun": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource"
+                },
+                "code-runner.clearPreviousOutput": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource"
                 }
             }
         }
